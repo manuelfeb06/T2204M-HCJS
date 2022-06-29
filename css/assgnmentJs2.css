@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 20px;
+    line-height: 1.25;
+    background-color: #e7e7e7;
+    font-family: "Roboto";
+}
+img{
+    max-width: 100%;
+}
+.section{
+    float: left;
+    width: 100%;
+}
+.container{
+    float: none;
+    width: 1200px;
+    margin: 0 auto;
+}
+div{
+    float: left;
+    margin: 10px;
+    color: grey;
+}
+.tempC{
+    color: black;
+}
+.section-2{
+    float: right;
+    text-align: right;
+}
+#city{
+    color: black;
+    font-size: 30px;
+}
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment Js2</title>
+    <link rel="stylesheet" href="css/assgnmentJs2.css"/>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css"/>
+</head>
+<body>
+    <section class="section main">
+        <div class="container">
+            <div class="icon">
+                <img src="https://openweathermap.org/img/wn/04d@2x.png"/>
+            </div>
+            <div class="tempC" style="font-size: 70px">
+                <p id="temp"><b>34<sup><sup>o</sup>C</sup></b></p>
+            </div>
+            <div class="tempF" style="font-size: 70px">
+                <p><sup>| <sup>o</sup>F</sup></p>
+            </div>
+            <div class="section-1">
+                <p id="press">Pricipitation: 0%</p>
+                <p id="hump">Humidity: 59%</p>
+                <p id="wind">Wind: 14km/h</p>
+            </div>
+            <div class="section-2">
+                <p id="city">Cầu Giấy, Hanoi</p>
+                <p id="time">Tuesday 11:00</p>
+                <p id="decs">Mostly sunny</p>
+            </div>
+            <script type="text/javascript" src="libs/jquery/jquery.js"></script>
+            <script type="text/javascript">
+                $.ajax({
+                    url:"https://api.openweathermap.org/data/2.5/weather?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric",
+                    method:"get",
+                    success: function (data){
+                        var ct = $("#city");
+                        ct.text(data.name+", "+data.sys.country);
+                        $("#hump").html("Humidity: "+data.main.humidity+"%");
+                        $("#decs").text(data.weather[0].description);
+                        $("#wind").html("Wind: "+data.wind.speed+" m/s");
+                    }
+                })
+            </script>
+        </div>
+    </section>
+</body>
+</html>
