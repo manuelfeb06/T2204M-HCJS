@@ -11,13 +11,13 @@
     <section class="section main">
         <div class="container">
             <div class="icon">
-                <img src="https://openweathermap.org/img/wn/04d@2x.png"/>
+                <p id="icon"><img src="..."/></p>
             </div>
             <div class="tempC" style="font-size: 70px">
                 <p id="temp"><b>34<sup><sup>o</sup>C</sup></b></p>
             </div>
             <div class="tempF" style="font-size: 70px">
-                <p><sup>| <sup>o</sup>F</sup></p>
+                <p><sup><sup>o</sup>C</sup><sup>| <sup>o</sup>F</sup></p>
             </div>
             <div class="section-1">
                 <p id="press">Pricipitation: 0%</p>
@@ -37,9 +37,12 @@
                     success: function (data){
                         var ct = $("#city");
                         ct.text(data.name+", "+data.sys.country);
+                        $("#temp").text(data.main.temp);
                         $("#hump").html("Humidity: "+data.main.humidity+"%");
                         $("#decs").text(data.weather[0].description);
                         $("#wind").html("Wind: "+data.wind.speed+" m/s");
+                        $("#icon").html("<img src='https://openweathermap.org/img/wn/" +
+                            data.weather[0].icon + "@2x.png' />");
                     }
                 })
             </script>
