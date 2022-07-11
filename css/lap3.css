@@ -1,0 +1,76 @@
+#page{
+    float: left;
+    width: 1000px;
+}
+#top{
+    float: left;
+    width: 100%;
+    background-color: #bac3cc;
+    padding: 40px 20px 40px 400px;
+    box-sizing: border-box;
+}
+#left{
+    float: left;
+    width: 300px;
+    margin-top: -180px;
+    margin-left: 50px;
+    background-color: #e7e7e7;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+#right{
+    float: left;
+    width: 650px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+#top-name{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+#top-client{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+#avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+#t-block1,#t-block2{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 40px;
+}
+#left img{
+
+}
+#left p img{
+    width: 25px;
+    transform: translateY(5px);
+    margin-right: 5px;
+}
+#left p{
+    text-align: left;
+}
+#right h2{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-top: 25px;
+}
+#right p{
+    font-size: 18px;
+    line-height: 1.25;
+    text-align: justify;
+}
+.block-title{
+    color: green;
+}
+.block-title.pro-title{
+    color: red;
+}
